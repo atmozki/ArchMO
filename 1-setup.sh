@@ -8,6 +8,14 @@
 #  ╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝░╚════╝░
 #-----------------------------------------------------
 
+echo -e "----------------------------------------------------"
+echo -e " ░█████╗░██████╗░░█████╗░██╗░░██╗███╗░░░███╗░█████╗░ "
+echo -e " ██╔══██╗██╔══██╗██╔══██╗██║░░██║████╗░████║██╔══██╗ "
+echo -e " ███████║██████╔╝██║░░╚═╝███████║██╔████╔██║██║░░██║ "
+echo -e " ██╔══██║██╔══██╗██║░░██╗██╔══██║██║╚██╔╝██║██║░░██║ "
+echo -e " ██║░░██║██║░░██║╚█████╔╝██║░░██║██║░╚═╝░██║╚█████╔╝ "
+echo -e " ╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝░╚════╝░ "
+echo -e "-----------------------------------------------------"
 # Add sudo no password rights
 sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
 
@@ -28,7 +36,6 @@ PKGS=(
 'fzf'
 'fuseiso'
 'gamemode'
-'gcc'
 'gimp' # Photo editing
 'git'
 'gnome-disk-utility'
@@ -50,36 +57,28 @@ PKGS=(
 'kvantum-qt5'
 'lsof'
 'lutris'
-'lzop'
 'mpv'
-'nano'
-'neofetch'
 'piper'
 'powerdevil'
 'powerline-fonts'
 'print-manager'
 'qemu'
-'rsync'
 'ranger'
 'snapper'
 'system-config-printer'
 'terminus-font'
 'traceroute'
-'ufw'
 'unrar'
-'unzip'
-'usbutils'
 'vim'
 'virt-manager'
 'virt-viewer'
 'vlc'
 'wget'
-'which'
+'wine'
 'wine-gecko'
 'wine-mono'
 'winetricks'
 'zip'
-'zsh'
 'zsh-syntax-highlighting'
 'zsh-autosuggestions'
 )
