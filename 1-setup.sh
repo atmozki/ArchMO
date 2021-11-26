@@ -88,3 +88,14 @@ for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo pacman -S "$PKG" --noconfirm --needed
 done
+
+PKGR=(
+'alg-firefox-settings'
+'alg-plasma-settings'
+'firefox'
+)
+
+for PKG in "${PKGR[@]}"; do
+    echo "UNINSTALLING: ${PKG}"
+    sudo pacman -Rns "$PKG" --noconfirm --needed
+done
