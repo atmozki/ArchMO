@@ -16,14 +16,15 @@ echo -e " ██╔══██║██╔══██╗██║░░██�
 echo -e " ██║░░██║██║░░██║╚█████╔╝██║░░██║██║░╚═╝░██║╚█████╔╝ "
 echo -e " ╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝░╚════╝░ "
 echo -e "-----------------------------------------------------"
-# Add sudo no password rights
-sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
+echo -e " █▄▄ █▄█   ▄▀█ ▀█▀ █▀▄▀█ █▀█ ▀█ █▄▀ █                "
+echo -e " █▄█ ░█░   █▀█ ░█░ █░▀░█ █▄█ █▄ █░█ █                "
+echo -e "-----------------------------------------------------"
 
 #Add parallel downloading
-sed -i 's/^#Para/Para/' /etc/pacman.conf
+sudo sed -i 's/^#Para/Para/' /etc/pacman.conf
 
 #Enable multilib
-sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 pacman -Sy --noconfirm
 
 echo -e "\nInstalling Base System\n"
@@ -87,10 +88,3 @@ for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo pacman -S "$PKG" --noconfirm --needed
 done
-
-if [ $(whoami) = "root" ];
-then
-    echo "Run as USER!"
-else
-	echo "You are already a user proceed with aur installs"
-fi
