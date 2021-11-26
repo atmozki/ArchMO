@@ -1,3 +1,5 @@
+![GH language](https://img.shields.io/github/languages/top/atmozki/ArchMO?style=for-the-badge)
+![GH License](https://img.shields.io/github/license/atmozki/ArchMO?style=for-the-badge)
 # ArchMO Installer Script
 Script to personalize Arch my way.
 
