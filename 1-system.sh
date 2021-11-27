@@ -25,14 +25,14 @@ sudo sed -i 's/^#Para/Para/' /etc/pacman.conf
 
 #Enable multilib
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
-pacman -Sy --noconfirm
+
+sudo pacman -Sy --noconfirm
 
 echo -e "\nInstalling Base System\n"
 
 PKGS=(
 'cmatrix'
 'code' # Visual Studio code
-'efibootmgr' # EFI boot
 'filelight'
 'fzf'
 'fuseiso'
@@ -42,13 +42,10 @@ PKGS=(
 'gnome-disk-utility'
 'go'
 'gparted' # partition management
-'grep'
 'grub-customizer'
 'gst-libav'
 'gst-plugins-good'
 'gst-plugins-ugly'
-'gst-plugins-base'
-'gst-plugins-base-libs'
 'gufw'
 'gwenview'
 'htop'
@@ -97,5 +94,5 @@ PKGR=(
 
 for PKG in "${PKGR[@]}"; do
     echo "UNINSTALLING: ${PKG}"
-    sudo pacman -Rns "$PKG" --noconfirm --needed
+    sudo pacman -Rns "$PKG" --noconfirm
 done
