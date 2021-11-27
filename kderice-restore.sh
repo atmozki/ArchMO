@@ -1,6 +1,5 @@
 #!/bin/bash
 
-export PATH=$PATH:~/.local/bin
 yay -S --noconfirm konsave
 pip install konsave
 konsave -i $HOME/ArchMO/atmoz.knsv
